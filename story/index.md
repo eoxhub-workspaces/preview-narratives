@@ -65,8 +65,7 @@ layout: page
         let storyfile;
         if (window && typeof window !== 'undefined' && 'URLSearchParams' in window) {
             const searchParams = new URLSearchParams(window.location.search);
-            storyfile = searchParams.get('id');
-            storyurl.value = `https://esa-eodashboards.github.io/eodashboard-narratives/${storyfile}.md`;
+            storyurl.value = searchParams.get('storyurl');
         }
     })
     
