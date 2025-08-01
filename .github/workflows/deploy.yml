@@ -27,6 +27,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./vitepress/dist/
+          folder: .vitepress/dist/
           branch: gh-pages
           clean-exclude: pr-preview
