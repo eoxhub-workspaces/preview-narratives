@@ -23,7 +23,7 @@ jobs:
         run: |
           npm install
           npm run build -- --base /${{ github.event.repository.name }}/
-          touch .eodash/dist/.nojekyll
+          touch .vitepress/dist/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
