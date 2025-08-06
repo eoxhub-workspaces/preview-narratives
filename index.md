@@ -60,7 +60,9 @@ layout: page
 
   // Click event handler
   const handleResultClick = (evt) => {
-    router.go(withBase(`/story?storyurl=${evt.detail.file}`));
+    const basePath = withBase('/story');
+    const url = new URLSearchParams({ storyurl: evt.detail.file }).toString();
+    router.go(`${basePath}?${url}`);
   };
 </script>
 
