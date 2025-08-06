@@ -35,9 +35,15 @@ layout: page
   onMounted(async () => {
     try {
       const params = new URLSearchParams(window.location.search);
-      const preview_url = params.get('preview_url');
-
-      if (!preview_url) {
+      let preview_url = params.get('preview_url');
+      if (preview_url) {
+        sessionStorage.setItem('preview_url', preview_url);
+      } else if (sessionStorage.getItem('preview_url')) {
+        // try to get it from storage
+        preview_url = sessionStorage.getItem('preview_url');
+        const newUrl = `${withBase('/')}?preview_url=${encodeURIComponent(preview_url)}`;
+        window.history.replaceState({}, '', newUrl);
+      } else {
         throw new Error('Missing "preview_url" parameter in URL.');
       }
 
