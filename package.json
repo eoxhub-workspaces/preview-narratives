@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@eox/pages-theme-eox": "^0.8.6",
-    "@eox/storytelling": "^1.9.3",
+    "@eox/storytelling": "1.9.2",
     "@eox/layout": "^1.0.0",
     "@eox/itemfilter": "^1.10.3",
     "mustache": "^4.2.0",
