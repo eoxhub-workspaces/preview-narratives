@@ -11,6 +11,7 @@
     "@eox/pages-theme-eox": "^0.8.6",
     "@eox/storytelling": "1.9.4",
     "@eox/layout": "^1.0.0",
+    "@eox/chart": "1.0.1",
     "@eox/itemfilter": "^1.10.3",
     "mustache": "^4.2.0",
     "vitepress": "^1.6.3"
