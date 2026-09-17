@@ -10,19 +10,6 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
-/*
-:root,
-.VPNav {
-  --vp-nav-bg-color: var(--vp-c-trilateral-gray);
-  --vp-nav-logo-height: 50px;
-
-  background: var(--vp-c-trilateral-gray);
-}
-.VPNav {
-  --vp-c-brand-1: rgb(191, 228, 253);
-  --vp-c-text-1: white;
-}
-*/
 
 .top-nav,
 .top-nav nav .button {
@@ -36,4 +23,39 @@
 :root,
 :root:has(.top-nav.at-top) {
   --vp-nav-height: 60px !important;
+}
+.VPContent {
+  background-color: var(--surface);
+}
+:is(.button,button):not(.chip,.extend).active {
+  background-color: var(--vp-c-brand-3);
+}
+
+/**
+* Trying to make the eox pages default footer as small as possible
+ */
+
+.large-space:not(nav,.row,.grid,table,.tooltip,.list,menu) {
+  display:none;
+}
+
+div.holder.large-padding {
+  padding:0!important;
+}
+div.grid {
+  margin-top: 0.5rem; 
+  margin-bottom: 0.5rem; 
+}
+div.grid.large-line > div > p {
+  margin-top: 0rem; 
+  margin-bottom: 0.2rem;
+}
+
+eox-feedback-button {
+  position: fixed;
+  z-index: 100;
+}
+
+.large-padding {
+  --_padding: 1rem !important;
 }

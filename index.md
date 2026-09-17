@@ -3,9 +3,6 @@
 layout: page
 
 ---
-<script client-only>
-  if(window && !customElements.get('eox-itemfilter')) import("@eox/itemfilter");
-</script>
 
 <script setup>
   import { ref, onMounted } from 'vue';
